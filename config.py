@@ -1,7 +1,5 @@
 # Configuración de desarrollo
-DEBUG = True
-SECRET_KEY = 'your_secret_key'
-SQLALCHEMY_DATABASE_URI = 'sqlite:///mydatabase.db'
+DEBUG = False
 
 # Rutas de archivos
 UPLOAD_FOLDER = 'app/static/assets/uploads'
