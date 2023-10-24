@@ -1,0 +1,90 @@
+/* Formulario*/
+#youtube-form{
+    height: 160px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+#youtube-form input{
+    margin-top: 2rem;
+    width: 75%;
+    height: 2.5rem;
+    border: 2px solid #588ecd;
+    background-color: #2B2A33;
+    color: white;
+
+}
+
+#youtube-form input:focus{
+    outline: none !important;
+}
+/*Opciones de desacrga*/
+#download-option{
+    margin-top: 2rem;
+
+}
+#download-option select{
+    height: 2rem;
+    margin-left: 1rem;
+ 
+}
+
+
+/*Boton*/
+.submit-youtube{
+    height: 2.6rem;
+    border-radius: 5px;
+    background-color: #007bff;
+    border: 2px solid #588ecd;
+    color: white;
+    margin-top: 1rem;
+    width: 180px;
+    font-size: 15px;
+}
+
+.download-youtube{
+    width: 120px;
+    text-align: center;
+    margin-top: 1rem;
+
+}
+
+/* Estilos para el contenedor grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
+    gap: 0px; /* Espacio entre las columnas */
+    margin-left: 12rem;
+    margin-top: 5rem;
+}
+
+/* Estilos para la columna izquierda  */
+.grid-container .left-column {
+    text-align: center; /* Centrar contenido horizontalmente */
+
+}
+
+/* Estilos para la columna derecha  */
+.grid-container .right-column {
+    text-align: center; /* Alinear contenido a la izquierda */
+    margin-top: 2rem;
+    margin-right: 9rem;
+    width: 100%;
+
+}
+
+
+/*Estilos del contenido*/
+
+#miniatura{
+    width: 90%;
+    margin-bottom: 1rem;
+}
+
+p{
+    font-size: 1.3rem;
+    margin: 1rem 0 1rem 0;
+}
+

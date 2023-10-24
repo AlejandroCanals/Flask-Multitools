@@ -1,0 +1,17 @@
+
+.messages {
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    margin-top: 2rem;
+    margin-left: 25rem;
+    padding: 5px;
+    background-color: #ffcccb; /* Fondo de color de alerta */
+    color: #d8000c; /* Color de texto de alerta */
+    font-weight: bold;
+    border: 1px solid #d8000c; /* Borde de alerta */
+    max-width: 400px;
+}
+
+#footer-pdf{
+    top: 12rem;
+}

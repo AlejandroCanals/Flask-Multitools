@@ -1,0 +1,297 @@
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Distribuye el contenido a lo largo del ancho de la barra de navegación */
+    align-items: center; /* Centra verticalmente los elementos de la barra de navegación */
+    background-color: rgb(56, 126, 206);
+    padding: 1rem;
+
+}
+
+
+#logo {
+    display: flex;
+    align-items: center; /* Centra verticalmente el contenido del logo */
+    margin-left: 30rem;
+}
+
+
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+    margin-right: 30rem;
+
+}
+
+.navbar li {
+    margin: 0 20px;
+}
+
+.navbar a {
+    color: white;
+    font-size: 1rem;
+}
+
+
+.encabezado{
+    margin-bottom: 2rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    height: auto;
+    text-align: center;
+    -webkit-box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+    border-radius: .25rem;
+    background-color: rgba(196, 200, 206, 0.055);;
+    
+    
+}
+
+.imagen{
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    margin-bottom: 2rem;
+}
+
+.descripcion{
+    margin-bottom: 2rem;
+}
+
+.app{
+    margin-top: -2.5rem;
+}
+
+footer{
+    color:white;
+    background-color: black;
+    text-align: center;
+    position: relative;
+    top: 5.6rem;
+
+}
+
+footer p{
+    font-size: 1.1rem;
+    padding: 0.5rem;
+}
+
+#processing-alert{
+    background-color: red;
+    
+}
+
+/* Estilo para el formulario */
+.template-form  {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #e6e6e6;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+}
+
+
+/* Estilo para la etiqueta */
+.template-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Estilo para el campo de entrada de archivos */
+.template-form  input[type="file"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilo para el botón de envío */
+.template-form input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Estilo para el botón de envío al pasar el cursor */
+.template-form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+/* Estilo del menú hamburguesa */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-top: 5px;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: 0.4s;
+  }
+
+
+/*Responsive  */
+
+@media screen and (max-width: 1670px) {
+        
+/*Navegacion */
+    #logo{
+        display: flex;
+        margin: 0;
+        margin-right: 7rem;
+    }
+
+    .navbar ul{
+        margin-right: 13rem;
+    }
+
+    
+
+}
+@media screen and (max-width: 1121) {
+
+ 
+}
+
+@media screen and (max-width: 980px) {
+    .navbar ul{
+        margin: 0;
+    }
+
+    #footer-background,#footer-pdf{
+        top: 17.3rem !important;
+    }
+    footer{
+        top:16rem
+    }
+
+    
+/*Youtube Container  */
+.grid-container{
+    display: block !important;
+    margin: 0 !important;
+
+
+}
+
+.right-column{
+    margin-top: 10rem;
+}
+
+.left-column{
+    width: 100%;
+    text-align: center;
+    margin-top: 5rem;
+   
+}
+
+.left-column img{
+    width: 80% !important;
+}
+}
+
+@media screen and (max-width: 782px) {
+
+    
+/*Menu hamburguesa  */
+.menu-toggle {
+    display: flex;
+}
+
+.navbar ul{
+display: none;
+}
+
+.navbar.active ul{
+display: block;
+margin-top: 3rem;
+
+}
+.menu-toggle.active{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+
+
+}
+
+.navbar.active li {
+display: block;
+padding: 10px 0;
+text-align: end;
+
+
+}
+
+#logo.active{
+    margin-bottom: 8rem;
+}
+
+img{
+    width: 70%;
+}
+
+h1{
+    font-size: 25px;
+}
+
+
+/*Responsive background remover  */
+#processed-image{
+    width: 85% !important;
+}
+
+#footer-background, #footer-pdf{
+    top: 20.5rem !important;
+}
+
+footer{
+    top:14rem
+}
+
+}
+
+   
+    
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+

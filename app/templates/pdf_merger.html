@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+  {% block content %}
+          
+
+    <form class="template-form" action="/pdf-merger" method="POST" enctype="multipart/form-data" >
+        <label for="pdf-files">Selecciona los archivos de PDF que desa fusionar:</label>
+        <input type="file" name="pdf-files" accept=".pdf" multiple required>
+        <input type="submit" value="Subir PDF">
+    </form>
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+          {% for message in messages %}
+            <p class="messages">{{ message }}</p>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+  {% endblock %}
+
+  {% block footer %}
+      <footer id="footer-pdf">
+        <p>Desarrollado por Alejandro Canals</p>
+      </footer>
+  {% endblock %}
+
+
+    

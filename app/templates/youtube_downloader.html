@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <form id="youtube-form" method="POST">
+        <label for="youtube-url"></label>
+
+        <input type="text" name="youtube-url" id="youtube-url" required placeholder="Introduzca la URL del video de YouTube:" style="text-align: center;">
+
+        <div id="download-option">
+
+            <label for="download-option" >Selecciona la opción de descarga:</label>
+            <select name="download-option" >
+                <option value="video">Descargar video MP4</option>
+                <option value="audio">Descargar audio MP3</option>
+            </select>
+        </div>
+
+        <button id="submit-youtube" class="submit-youtube" type="submit">Descargar</button>
+    </form>
+
+    <div class="grid-container">
+
+        <div class="left-column">
+
+            {% if session.get('thumbnail-url') %}
+                <img src="{{ session['thumbnail-url'] }}" alt="Miniatura del video" id="miniatura" headers="Cache-Control: no-store">
+            {% endif %}
+        </div>
+
+        <div class="right-column">
+            {% if session.get('title') %}
+
+                <p>Estás a punto de descargar:</p>
+                <h2>{{ session['title'] }}</h2>
+
+                <button class="submit-youtube download-youtube" id="descargarBoton">
+                    <a href="{% if request.form['download-option'] == 'audio' %}/download-audio/{{ session['title'] }}.mp3{% else %}/download/{{ session['title'] }}.mp4{% endif %}" 
+                        download="{{ session['title'] }}.{% if request.form['download-option'] == 'audio' %}mp3{% else %}mp4{% endif %}">
+                        Descargar {% if request.form['download-option'] == 'audio' %}audio{% else %}video{% endif %}
+                    </a>
+                </button>
+
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+<footer>
+  <p>Desarrollado por Alejandro Canals</p>
+</footer>
+
+
+{% endblock %}
+
+
+
+{% block script %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Tu código JavaScript aquí
+        document.querySelector('#youtube-form').addEventListener('submit', function (e) {
+            var alertDiv = document.getElementById('loader');
+
+            alertDiv.style.display = 'inline-block';  // Muestra la alerta mientras se procesa
+        });
+    });
+</script>
+
+{% endblock %}

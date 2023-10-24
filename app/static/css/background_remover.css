@@ -1,0 +1,27 @@
+
+#processed-image{
+    margin-top: 1rem;
+    -webkit-box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+    background-color: rgba(201, 206, 214, 0.178);;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    width: 50%;
+}
+
+.boton-descargar{
+    background-color: #007bff;;
+    color:#fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 12px;
+  
+}
+
+
+
+#footer-background{
+    top: 12.9rem;
+}
+

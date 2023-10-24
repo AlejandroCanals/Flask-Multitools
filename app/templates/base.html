@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiTask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/youtube_downloader.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pdf_merger.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/background_remover.css')}}">
+
+
+
+</head>
+<body>
+   
+    <header>
+  
+   
+        <nav class="navbar">
+            <div id="logo">
+                <a href="/" style="font-size: 1.2rem;">Multitools.com</a>
+            </div>
+
+
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+            <ul>
+                
+                <li><a href="/">Descargador</a></li>
+                <li><a href="/background-remover">Removedor de Fondo</a></li>
+                <li><a href="/pdf-merger">Combinador de PDF</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="container">
+        <h1 class="encabezado">{{ app_descripcion }}</h1>
+
+        <div class="imagen">
+            <img src="{{ app_image_url }}" alt="Nombre de la aplicación" width="50%">
+        </div>
+
+        <div class="app">
+            {% block content %}
+            {% endblock %}
+            <div id="loader" class="loader" style="display: none;">
+                <div class="loader__bar"></div>
+                <div class="loader__bar"></div>
+                <div class="loader__bar"></div>
+                <div class="loader__bar"></div>
+                <div class="loader__ball"></div>
+        
+            </div>
+        </div> 
+
+    </section>
+    
+{% block footer %}
+    
+{% endblock %}
+
+{% block script %}
+
+{% endblock %}
+
+<script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navbar = document.querySelector(".navbar");
+    const logo = document.querySelector("#logo");
+  
+    menuToggle.addEventListener("click", function() {
+      navbar.classList.toggle("active");
+      menuToggle.classList.toggle("active");
+      logo.classList.toggle("active");
+
+    });
+  </script>
+  
+</body>
+
+
+
+
+</html>

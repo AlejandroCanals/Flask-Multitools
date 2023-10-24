@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <form class="template-form" action="/background-remover" id="template-form" method="POST" enctype="multipart/form-data">
+        <label for="background-files">Selecciona la foto:</label>
+        <input type="file" name="background-files" accept=".jpg, .png, .jpeg" required>
+        <input type="submit" value="Subir y Procesar Imagen">
+        
+            
+
+    </form>
+
+    
+
+
+
+    {% if processed_image_url %}
+        <h2>Imagen Procesada:</h2>
+        <div>
+            <img src="{{ processed_image_url }}" alt="Processed Image"  id="processed-image" >
+        </div>
+        <a class="boton-descargar" href="/download-processed-image">Descargar Imagen Procesada</a>
+
+    {% endif %}
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <p class="messages">{{ message }}</p>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    {% endwith %}
+
+
+
+{% endblock %}
+
+
+{% block footer %}
+<footer id="footer-background">
+  <p>Desarrollado por Alejandro Canals</p>
+</footer>
+{% endblock %}
+
+{% block script %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Tu código JavaScript aquí
+        document.querySelector('#template-form').addEventListener('submit', function (e) {
+            var alertDiv = document.getElementById('loader');
+
+            alertDiv.style.display = 'inline-block';  // Muestra la alerta mientras se procesa
+        });
+    });
+</script>
+
+{% endblock %}
+
