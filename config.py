@@ -1,5 +1,5 @@
 # Configuración de desarrollo
-DEBUG = False
+DEBUG = True
 
 # Rutas de archivos
 UPLOAD_FOLDER = 'app/static/assets/uploads'
