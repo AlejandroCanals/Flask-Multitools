@@ -4,7 +4,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 from app import app
 
 # Lista de carpetas que deseas limpiar
-carpetas_a_limpiar = ['static/assets/videos', 'static/assets/audios', 'static/assets/uploads']
+carpetas_a_limpiar = ['static/assets/videos', 'static/assets/audio', 'static/assets/uploads']
 
 def limpiar_carpetas(carpetas_a_limpiar):
     for carpeta in carpetas_a_limpiar:

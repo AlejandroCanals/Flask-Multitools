@@ -254,6 +254,7 @@ text-align: end;
 
 img{
     width: 70%;
+
 }
 
 h1{
@@ -277,7 +278,15 @@ footer{
 }
 
    
-    
+@media screen and (max-width: 782px) {
+    #download-option select{
+        margin-top: 1rem;
+    }
+
+    #submit-youtube{
+        margin-left: 1rem;
+    }
+}
 
 
 

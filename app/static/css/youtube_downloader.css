@@ -72,6 +72,7 @@
     margin-top: 2rem;
     margin-right: 9rem;
     width: 100%;
+   
 
 }
 
@@ -81,6 +82,7 @@
 #miniatura{
     width: 90%;
     margin-bottom: 1rem;
+    border-radius: 10px;
 }
 
 p{
