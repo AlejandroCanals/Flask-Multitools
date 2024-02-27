@@ -1,4 +1,4 @@
-# An application that allows you to download videos and audios from YouTube, remove backgrounds from images, and merge PDFs, all in one single application!"
+# An application that allows you to download videos and audios from YouTube, remove backgrounds from images, and merge PDFs, all in one single application!
 
 # TECHNOLOGIES USED:
 
